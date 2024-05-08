@@ -14,16 +14,14 @@ import webapp.crud_escola.Repository.VerificaCadastroAdmRepository;
 
 @Controller
 public class AdministradorController {
-    // atributos
     boolean acessoInternoAdm = false;
 
     @Autowired
-    private AdministradorRepository ar;
+    AdministradorRepository ar;
 
     @Autowired
     private VerificaCadastroAdmRepository vcar;
 
-    // métodos
     @PostMapping("cad-adm")
     public ModelAndView cadastroAdmBD(Administrador adm, RedirectAttributes attributes) {
 
@@ -36,12 +34,13 @@ public class AdministradorController {
             String mensagem = "Cadastro Realizado com sucesso";
             System.out.println(mensagem);
             attributes.addFlashAttribute("msg", mensagem);
-            attributes.addFlashAttribute("classe", "vermelho");
+            attributes.addFlashAttribute("classe", "verde");
         } else {
             String mensagem = "Cadastro Não Realizado";
             System.out.println(mensagem);
             attributes.addFlashAttribute("msg", mensagem);
             attributes.addFlashAttribute("classe", "vermelho");
+            mv.setViewName("redirect:/cad-adm");
         }
 
         return mv;
@@ -94,6 +93,25 @@ public class AdministradorController {
             attributes.addFlashAttribute("classe", "vermelho");
         }
 
+        return mv;
+    }
+
+    @GetMapping("/cadastrar-professor")
+    public String cadastrarProfessor() {
+        return "adm/cadastrar-professor";
+    }
+
+    @GetMapping("/cadastrar-aluno")
+    public String cadastrarAluno() {
+        return "adm/cadastrar-aluno";
+    }
+
+    @PostMapping("logout-adm")
+    public ModelAndView logoutAdm(RedirectAttributes attributes) {
+        ModelAndView mv = new ModelAndView("redirect:/login-adm");
+        attributes.addFlashAttribute("msg", "Logout Efetuado");
+        attributes.addFlashAttribute("classe", "verde");
+        acessoInternoAdm = false;
         return mv;
     }
 
