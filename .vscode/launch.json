@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GerenciamentoSenaiApplication",
+            "request": "launch",
+            "mainClass": "br.com.senai.gerenciamento_senai.GerenciamentoSenaiApplication",
+            "projectName": "gerenciamento_senai"
+        },
+        {
+            "type": "java",
             "name": "ApiFinalApplication",
             "request": "launch",
             "mainClass": "com.matheus.api_final.ApiFinalApplication",
