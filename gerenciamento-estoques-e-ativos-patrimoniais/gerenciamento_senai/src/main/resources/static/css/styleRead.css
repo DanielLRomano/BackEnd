@@ -1,0 +1,160 @@
+.content {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f6e6e7;
+    border-radius: 10px;
+    border: 2px solid #daa3a3;
+    padding: 6px 0px;
+    margin-right: 1em;
+}
+
+.content h2 {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #ebebeb;
+    color: #0f0f0f;
+}
+
+.title{
+    background-color: #f6e6e7;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.read table {
+    border-radius: 8px;
+    width: 100%;
+    padding-top: 20px;
+    border-collapse: collapse;
+    border-radius: 15px;
+}
+.read table thead {
+    background-color: #DDB9BB;
+}
+.read table thead td {
+    text-align: center  ;
+    padding: 10px;
+    font-weight: bold;
+    color: #000000;
+    font-size: 14px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 900;
+}
+.read table tbody tr {
+    border-bottom: 2px solid #DDB9BB;
+}
+.read table tbody td {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+.read table tbody tr:nth-child(even) {
+    background-color: #fbfcfc;
+}
+.read table tbody tr:hover {
+    background-color: #b45f5f;
+}
+.read table tbody tr:hover td {
+    color: #FFFFFF;
+}
+.read table tbody tr:hover td:nth-child(1) {
+    color: #FFFFFF;
+}
+.read table tbody tr td {
+    text-align: center;
+    padding: 10px;
+}
+.read table tbody tr td:nth-child(1) {
+    color: #324877;
+}
+.read table tbody tr td.actions {
+    padding: 8px;
+    text-align: right;
+}
+.read table tbody tr td.actions .edit, .read table tbody tr td.actions .trash, .read table tbody tr td.actions .aprovar {
+    display: inline-flex;
+    text-align: right;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 0px 14px;
+}
+.read table tbody tr td.actions .trash {
+    background-color: #b73737;
+    padding: 15px 14px;
+}
+.read table tbody tr td.actions .trash:hover {
+    background-color: #a33131;
+
+}
+.read table tbody tr td.actions .edit {
+    background-color: #2b2b2b;
+    padding: 15px 14px;
+}
+.read table tbody tr td.actions .aprovar {
+    background-color: #0f5214;
+    padding: 5px 10px;
+}
+
+.read table tbody tr td.actions .aprovar:hover{
+    background-color: #225025;
+}
+.read table tbody tr td.actions .edit:hover {
+    background-color: #474747;
+}
+
+.links{
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 1em;
+    float: right;
+}
+
+.links a{
+    text-decoration: none;
+}
+
+.links{
+    padding: 1.25em 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+.link{
+    padding: 1.25em 3em;
+    width: 25em;
+    font-size: 10px;
+    color: white;
+    background-color: rgb(163, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 1.5em;
+    margin: 0px auto;
+    transition: 0.4s;
+}
+
+.link:hover{
+    transition: 0.4s;
+    background-color: rgb(139, 50, 50);
+    transform: scale(1.05);
+}
